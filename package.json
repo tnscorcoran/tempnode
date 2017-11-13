@@ -1,0 +1,21 @@
+{
+  "name": "tc-idp",
+  "version": "1.0.0",
+  "description": "tc-idp for 3scale Oauth2 IDP purposes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agmoyano/OpenIDConnect.git"
+  },  
+  "dependencies": {
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "errorhandler": "*",
+    "express": "~4.0",
+    "express-session": "*",
+    "method-override": "*",
+    "morgan": "*",
+    "hat": "*",
+    "jade": "*",
+    "jsonwebtoken": "*"
+  }
+}

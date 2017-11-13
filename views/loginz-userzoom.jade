@@ -1,0 +1,60 @@
+doctype html
+html
+  head
+    title Node Authentication
+    |         
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css')
+    |         
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css')
+    |         
+    style.
+      body            { color:rgb(12, 42, 49); }
+      .btn-warning { background-color:rgb(2, 163, 213); border-color:rgb(2, 163, 213); }
+      .page-wrapper { overflow:hidden; padding-top:60px; }
+      .page-header-top { position:fixed; top:0; left:0; width:100%; z-index:90; min-height:60px; color:rgb(255, 255, 255); background-color:rgb(255,255,255); height:60px; }
+      .wrapper { margin:0 auto; width:1260px; }
+      .logo { float:left; }
+      img { height:75px; width:150.2px; margin-top:5px;  margin-left:5px; }
+      .breadcrumbs { float:left; margin-top:18px; padding:0 0 0 20px; position:relative; list-style-type: none; color:rgb(255, 255, 255); }
+      .visible { color:rgb(255, 255, 255); overflow:hidden; padding-left:0; float:left; line-height:20px; pading-top:4px; font-family:'SimplonNorm-Regular',Arial,Helvetica,sans-serif; }
+      strong { color:rgb(255, 255, 255); }
+  body
+    .page-wrapper
+      header.page-header-top
+        .wrapper
+          .logo
+            a(href='#')
+              img(alt='Userzoom', src='//userzoom-poc.3scale.net/images/userzoom')
+          ul.breadcrumbs
+            li.visible
+              a(href='#')
+                strong
+                | 
+    .container
+      .col-sm-6.col-sm-offset-3
+        h1
+          span.fa.fa-sign-in
+          |  Logged In Content
+        |         
+        .alert.alert-danger #{loginError}
+        |           
+        |         
+        br        
+        form(action='/userzoom-login', method='post')
+          .form-group
+            label 
+            |                         
+            input.form-control(type='hidden', name='email', value='user@userzoom.com')
+          |                 
+          .form-group
+            label 
+            |                         
+            input.form-control(type='hidden', name='password', value='foo123')
+          |                 
+          button.btn.btn-warning.btn-lg(type='submit') 3scale Portal
+          |                 
+          |                 
+          input(type='hidden', name='scope', value='read')
+        |         
+        hr
+

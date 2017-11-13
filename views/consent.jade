@@ -1,0 +1,29 @@
+doctype html
+// This page handles the authorization of the client application
+html
+  head
+    title Node Authentication
+    |         
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css')
+    |         
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css')
+    |         
+    style.
+      body            { padding-top:80px; }
+  body
+    .container
+      .jumbotron.text-center
+        form(action='#{action}', method='GET')
+          input(type='hidden', name='state', value='#{state}')
+          |  
+          | &#x9;&#x9;&#x9;
+          input(type='hidden', name='scope', value='#{scope}')
+          |  
+          |                                 
+          .alert.alert-danger
+            | The application requested access to your 
+            strong
+            |  data; 
+            div Would you like to grant the access?
+          |                         
+          input#allow(type='submit', value='Allow')

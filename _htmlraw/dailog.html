@@ -1,0 +1,33 @@
+<!--This page handles the authorization of the client application-->
+<!doctype html>
+<html>
+<head>
+        <title>Node Authentication</title>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+        <style>
+                body            { padding-top:80px; }
+        </style>
+</head>
+<body>
+<div class="container">
+
+        <div class="jumbotron text-center">
+
+                <form action="http://ec2-52-16-122-197.eu-west-1.compute.amazonaws.com/callback" method="GET">
+                        <input type="hidden" name="state" value=<%= state %> />
+			<input type="hidden" name="scope" value=<%= scope %> />
+
+                                <div class="alert alert-danger"> The application requested access to your <strong><%= scope %></strong> data; <div>Would you like to grant the access?</div>
+				</div>
+
+                        <input type="submit" value="Allow" id="allow">
+                        <input type="submit" value="Deny" name="cancel" id="deny">
+                </div>
+
+                </form>
+        </div>
+
+</div>
+</body>
+</html

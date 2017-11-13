@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	h1  #{title}
+	form(method='POST' id='form')
+		span#errorLabel(style='color:red;fontSize="6px"')  #{loginError}
+		br
+		input(type='text', name='msisdn', id='msisdn', placeholder='Enter MSISDN')
+		input(type='text', name='pin', id='pin', placeholder='Enter PIN')
+		br
+		input(type='submit')
+		br
+		p
+		div
+			label Not Yet Registered? 
+	form(method='GET', action='/user/create')
+		div
+			button.btn() Register Now
