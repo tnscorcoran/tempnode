@@ -6,6 +6,9 @@
     "type": "git",
     "url": "https://github.com/agmoyano/OpenIDConnect.git"
   },  
+  "scripts": {
+    "start": "tc-idp.js"
+  },
   "dependencies": {
     "body-parser": "*",
     "cookie-parser": "*",
